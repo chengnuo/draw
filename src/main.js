@@ -6,6 +6,12 @@ import router from './router'
 
 Vue.config.productionTip = false
 
+// 完整引入 Element
+import ElementUI from 'element-ui'
+import locale from 'element-ui/lib/locale/lang/en'
+
+Vue.use(ElementUI, { locale })
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
