@@ -1,11 +1,13 @@
 <template>
   <div class="hello">
-    <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
+    <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect" :router="true">
       <el-menu-item index="1">首页</el-menu-item>
       <el-menu-item index="2">教学概念</el-menu-item>
       <el-menu-item index="3">学员成长记录查询</el-menu-item>
       <el-menu-item index="4">团队</el-menu-item>
-      <el-menu-item index="5">主题</el-menu-item>
+      <el-menu-item index="theme">
+        主题
+      </el-menu-item>
       <el-menu-item index="6">关于</el-menu-item>
     </el-menu>
     <div>
