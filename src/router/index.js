@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import theme from '@/pages/theme'
 import about from '@/pages/about'
+import team from '@/pages/team'
 
 Vue.use(Router)
 
@@ -22,6 +23,11 @@ export default new Router({
       path: '/about',
       name: 'about',
       component: about
+    },
+    {
+      path: '/team',
+      name: 'team',
+      component: team
     },
   ]
 })
