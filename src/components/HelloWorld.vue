@@ -8,7 +8,7 @@
       <el-menu-item index="theme">
         主题
       </el-menu-item>
-      <el-menu-item index="6">关于</el-menu-item>
+      <el-menu-item index="about">关于</el-menu-item>
     </el-menu>
     <div>
       <el-row :gutter="20">
