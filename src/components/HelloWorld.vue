@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect" :router="true">
-      <el-menu-item index="1">首页</el-menu-item>
+      <el-menu-item index="/">首页</el-menu-item>
       <el-menu-item index="teachingConcept">教学概念</el-menu-item>
       <el-menu-item index="3">学员成长记录查询</el-menu-item>
       <el-menu-item index="team">团队</el-menu-item>
@@ -133,6 +133,7 @@ a {
 .box-card {
   width: 100%;
   margin-top: 10px;
+  text-align: left;
 }
 .el-carousel__item h3 {
   color: #475669;

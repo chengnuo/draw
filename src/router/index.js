@@ -9,6 +9,7 @@ import teachingConcept from '@/pages/teachingConcept'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
