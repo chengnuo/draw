@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="home">
     <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect" :router="true">
       <el-menu-item index="/">首页</el-menu-item>
       <el-menu-item index="teachingConcept">教学概念</el-menu-item>
@@ -73,8 +73,8 @@
             </div>
             <div>
               <el-carousel indicator-position="outside">
-                <el-carousel-item v-for="item in 4" :key="item">
-                  <h3>{{ item }}</h3>
+                <el-carousel-item v-for="item in imgs" :key="item">
+                  <img class="img" :src="item" />
                 </el-carousel-item>
               </el-carousel>
             </div>
@@ -86,68 +86,90 @@
 </template>
 
 <script>
+import img1 from '@/assets/images/IMG_1591.jpg';
+import img2 from '@/assets/images/IMG_1592.jpg';
+import img3 from '@/assets/images/IMG_1595.jpg';
+import img4 from '@/assets/images/IMG_1588.jpg';
+
+
 export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      imgs: [ img1, img2, img3, img4 ], // 图片
     }
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+<style scoped lang="scss">
+.home{
+  h1, h2 {
+    font-weight: normal;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  a {
+    color: #42b983;
+  }
 
-.text {
-  font-size: 14px;
-}
+  .text {
+    font-size: 14px;
+  }
 
-.item {
-  margin-bottom: 18px;
-}
+  .item {
+    margin-bottom: 18px;
+  }
 
-.clearfix:before,
-.clearfix:after {
-  display: table;
-  content: "";
-}
-.clearfix:after {
-  clear: both
-}
+  .clearfix:before,
+  .clearfix:after {
+    display: table;
+    content: "";
+  }
+  .clearfix:after {
+    clear: both
+  }
 
-.box-card {
-  width: 100%;
-  margin-top: 10px;
-  text-align: left;
-}
-.el-carousel__item h3 {
-  color: #475669;
-  font-size: 18px;
-  opacity: 0.75;
-  line-height: 300px;
-  margin: 0;
-}
+  .box-card {
+    width: 100%;
+    margin-top: 10px;
+    text-align: left;
+  }
+  .el-carousel__item{
+    text-align: center;
+  }
+  .el-carousel__item h3 {
+    color: #475669;
+    font-size: 18px;
+    opacity: 0.75;
+    line-height: 300px;
+    margin: 0;
+  }
 
-.el-carousel__item:nth-child(2n) {
-  background-color: #99a9bf;
-}
+  .el-carousel__item:nth-child(2n) {
+    background-color: #99a9bf;
+  }
 
-.el-carousel__item:nth-child(2n+1) {
-  background-color: #d3dce6;
+  .el-carousel__item:nth-child(2n+1) {
+    background-color: #d3dce6;
+  }
+  .img{
+    height: 100%;
+  }
+}
+</style>
+<style lang="scss">
+.home {
+  .el-carousel__container{
+    height: 500px;
+  }
 }
 </style>
