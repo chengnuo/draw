@@ -1,6 +1,7 @@
 <!-- 教学概念 -->
 <template>
   <div class="teachingConcept">
+    <drawMenu />
     <el-row :gutter="20">
       <el-col :span="24">
         <el-card class="box-card">
@@ -12,15 +13,7 @@
               :data="data6"
               node-key="id"
               default-expand-all
-              @node-drag-start="handleDragStart"
-              @node-drag-enter="handleDragEnter"
-              @node-drag-leave="handleDragLeave"
-              @node-drag-over="handleDragOver"
-              @node-drag-end="handleDragEnd"
-              @node-drop="handleDrop"
-              draggable
-              :allow-drop="allowDrop"
-              :allow-drag="allowDrag">
+            >
             </el-tree>
           </div>
         </el-card>
@@ -59,6 +52,7 @@
 </template>
 
 <script>
+  import drawMenu from '@/components/drawMenu'
 export default {
   name: 'teachingConcept',
   data() {
@@ -90,6 +84,9 @@ export default {
         label: 'label'
       }
     };
+  },
+  components: {
+    drawMenu,
   },
 }
 </script>

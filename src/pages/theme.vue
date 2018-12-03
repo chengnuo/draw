@@ -1,6 +1,7 @@
 <!-- 主题 -->
 <template>
   <div class="theme">
+    <drawMenu />
     <!-- 艺丰画室 -->
     <el-row>
       <el-col :span="12">
@@ -95,13 +96,17 @@
 </template>
 
 <script>
+  import drawMenu from '@/components/drawMenu'
 export default {
   name: 'theme',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
-  }
+  },
+  components: {
+    drawMenu,
+  },
 }
 </script>
 

@@ -1,6 +1,7 @@
 <!-- 团队 -->
 <template>
   <div class="team">
+    <drawMenu />
     <el-row>
       <el-col :span="24">
         <el-card class="box-card">
@@ -59,13 +60,17 @@
 </template>
 
 <script>
+  import drawMenu from '@/components/drawMenu'
 export default {
   name: 'team',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
-  }
+  },
+  components: {
+    drawMenu,
+  },
 }
 </script>
 

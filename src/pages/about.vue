@@ -1,6 +1,7 @@
 <!-- 关于 -->
 <template>
   <div class="about">
+    <drawMenu />
     <!-- 滚动图片 -->
     <el-carousel :interval="4000" type="card" height="200px">
       <el-carousel-item v-for="item in 6" :key="item">
@@ -55,13 +56,17 @@
 </template>
 
 <script>
+  import drawMenu from '@/components/drawMenu'
 export default {
   name: 'about',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
-  }
+  },
+  components: {
+    drawMenu,
+  },
 }
 </script>
 
