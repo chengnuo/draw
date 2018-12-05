@@ -9,6 +9,7 @@
         主题
       </el-menu-item>
       <el-menu-item index="/about">关于</el-menu-item>
+      <el-menu-item index="/userManagement">用户管理</el-menu-item>
     </el-menu>
   </div>
 </template>

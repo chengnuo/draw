@@ -5,6 +5,8 @@ import about from '@/pages/about' // 关于
 import home from '@/pages/home' // 主页
 import team from '@/pages/team' // 团队
 import teachingConcept from '@/pages/teachingConcept' // 教学理念
+import userManagement from '@/pages/userManagement' // 用户管理
+
 
 Vue.use(Router)
 
@@ -40,6 +42,11 @@ export default new Router({
       path: '/teachingConcept',
       name: 'teachingConcept',
       component: teachingConcept
+    },
+    {
+      path: '/userManagement',
+      name: 'userManagement',
+      component: userManagement
     },
   ]
 })
